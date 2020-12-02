@@ -1,52 +1,60 @@
-# Good-README-Generator    
+* # Good-README-Generator
+      
 # Table of Contents
+
 * [About](#about)
+
 * [Installation](#installation)
+
 * [Instructions](#instructions)
+
 * [Screenshot](#screenshot)
+
 * [Author](#author)
+
 * [Credits](#credits)
+
 * [License](#license)
+
 * [Badges](#Badges)
+
 * [Contributing](#Contributing)
         
 ## About
-A command line application that takes in data by asking the user a series of questions in order to generate a good README file for a project.
-You can launch the application by clicking [here.](https://github.com/dazrin/Good-README-Generator) 
-> Website URL: https://github.com/dazrin/Good-README-Generator
+A command line application that takes in data from the user and generates a README using that data
+You can launch the application by clicking [here.](github.com/dazrin/Good-README-Generator) 
+> Website URL: github.com/dazrin/Good-README-Generator
         
 ## Installation
-- Step 1. Ensure that you have navigated to the directory containing the project.
-- Step 2: Type 'npm init' into your terminal and answer the prompts that are displayed.
-- Step 3: Install the inquirer package using node package manager. To do this, type 'npm install inquirer'.
-- Step 4: Run the program by typing 'node index.js' into the terminal.
+1. npm init 2. npm i inquirer 3. node index.js
         
 ## Instructions
-Simply type 'node index.js' to begin the program. Once you have done so, a series of questions will appear in your terminal. Answer each one of the questions appropriately. Once you have finished answering all the questions, a README.md file will be written into your directory.
+Once you have typed 'node index.js' into your terminal, a series of questions will appear. Simply answer them to generate your README
         
 ## Screenshot
-![READMEGenScreenshot](https://i.imgur.com/keznLsk.png "A command line application taking in questions to generate a README")
+![READMEGenScreenshot](https://i.imgur.com/MAWFsqX.png "Command Line Application ")
         
 ## Author 
 
 ![ProfileImage](https://i.imgur.com/Gi4wDf2.jpg)
 
-Github User: Dazrin 
+**undefined**
 
 Email: xdazee@gmail.com
 
-Location: Vancouver, BC
+Location:undefined
 
-GitHub: https://github.com/dazrin
+GitHub: undefined
         
 ## Credits
-Credit to Edward Apostol, Eldar Humbatov, Hustin Kava, Manuel Leung Chen, and Rachael Mcilhagga for helping me understand how to create a command line interface in nodeJS
+Credit goes to Eldar Humbatov, Ed Apostol, Hustin Kava, Manuel Leung Chen and Rachael Mchilhagga
         
 ## License
+This project is licensed under the undefined - see the undefined file for details
 Please credit me if you use or change my code! Thank you :)
         
 ## Badges
-![shield](https://img.shields.io/github/followers/dazrin?label=Follow&style=social)
+![shield](https://img.shields.io/github/followers/Dazrin?label=Follow&style=social)
         
 ## Contributing
         
