@@ -1,133 +1,62 @@
-const fs = require ('fs');
-const inquirer = require('inquirer');
-inquirer
-    .prompt([
-        {
-            type: 'input',
-            name: 'title', //data.title 
-            message: 'What is your project title?',
-        },
-        {
-            type: 'input',
-            name: 'description', //data.description
-            message: 'Please provide a description for your project',
-        },
-        {
-            type: 'input',
-            name: 'url', //data.url
-            message: "Please enter your project's deployed URL",
-        },
-        {
-            type: 'input',
-            name: 'installationProcess', //data.installationProcess
-            message: 'Please provide the steps required to install your project',
-        },
-        {
-            type: 'input',
-            name: 'instructions', //data.instructions
-            message: 'Please provide instructions to use your project',
-        },
-        {
-            type: 'input',
-            name: 'imageName', //data.imageName
-            message: "Please provide a name for the screenshot that will be added to your README",
-        },
-        {
-            type: 'input',
-            name: 'imageURL', //data.imageURL
-            message: 'Please provide a URL for your screenshot',
-        },
-        {
-            type: 'input',
-            name: 'imageDescription', //data.imageDescription
-            message: 'Please provide a description for your screenshot',
-        },
-        {
-            type: 'input',
-            name: 'gitProfileImage', //data.gitProfileImage
-            message: 'Please provide a url for your github profile image',
-        },
-        {
-            type: 'input',
-            name: 'gitUser', //data.gitUser
-            message: 'Please enter your github username',
-        },
-        {
-            type: 'input',
-            name: 'gitEmail', //data.gitEmail
-            message: 'Please enter the email address associated with your github account',
-        },
-        {
-            type: 'input',
-            name: 'gitLocation', //data.gitlocation
-            message: 'Please enter your location',
-        },
-        {
-            type: 'input',
-            name: 'gitURL', //data.gitUrl
-            message: 'Please enter your github URL',
-        },
-        {
-            type: 'input',
-            name: 'credits', //data.credits
-            message: 'Please enter a short message giving credit to those who have helped you on this project',
-        },
-        {
-            type: 'input',
-            name: 'liscenseName', //data.licenseName
-            message: 'Please provide the name of your liscense',
-        },
-        {
-            type: 'input',
-            name: 'liscenseURL', //data.licenseUrl
-            message: 'Please provide the URL of your liscense',
-        }
-    ])
-    .then((data) => {
-        const markdown =
-`* # ${data.title}
+* # Good-README-Generator
       
 # Table of Contents
-\n* [About](#about)
-\n* [Installation](#installation)
-\n* [Instructions](#instructions)
-\n* [Screenshot](#screenshot)
-\n* [Author](#author)
-\n* [Credits](#credits)
-\n* [License](#license)
-\n* [Badges](#Badges)
-\n* [Contributing](#Contributing)
+
+* [About](#about)
+
+* [Installation](#installation)
+
+* [Instructions](#instructions)
+
+* [Screenshot](#screenshot)
+
+* [Author](#author)
+
+* [Credits](#credits)
+
+* [License](#license)
+
+* [Badges](#Badges)
+
+* [Contributing](#Contributing)
         
 ## About
-${data.description}
-You can launch the application by clicking [here.](${data.url}) 
-> Website URL: ${data.url}
+A command line application that takes in data by asking the user a series of questions in order to generate a good README file for a project.
+You can launch the application by clicking [here.](https://github.com/dazrin/Good-README-Generator) 
+> Website URL: https://github.com/dazrin/Good-README-Generator
         
 ## Installation
-${data.installationProcess}
+- Step 1. Ensure that you have navigated to the directory containing the project.
+- Step 2: Type 'npm init' into your terminal and answer the prompts that are displayed.
+- Step 3: Install the inquirer package using node package manager. To do this, type 'npm install inquirer'.
+- Step 4: Run the program by typing 'node index.js' into the terminal.
         
 ## Instructions
-${data.instructions}
+Simply type 'node index.js' to begin the program. Once you have done so, a series of questions will appear in your terminal. Answer each one of the questions appropriately. Once you have finished answering all the questions, a README.md file will be written into your directory.
         
 ## Screenshot
-![${data.imageName}](${data.imageURL} "${data.imageDescription}")
+![READMEGenScreenshot](https://i.imgur.com/keznLsk.png "A command line application taking in questions to generate a README")
         
 ## Author 
-\n![ProfileImage](${data.gitProfileImage})
-\n**${data.gitName}**
-\nEmail: ${data.gitEmail}
-\nLocation:${data.gitlocation}
-\nGitHub: ${data.gitUrl}
+
+![ProfileImage](https://i.imgur.com/Gi4wDf2.jpg)
+
+Github User: Dazrin 
+
+Email: xdazee@gmail.com
+
+Location: Vancouver, BC
+
+GitHub: https://github.com/dazrin
         
 ## Credits
-${data.credits}
+Credit to Edward Apostol, Eldar Humbatov, Hustin Kava, Manuel Leung Chen, and Rachael Mcilhagga for helping me understand how to create a command line interface in nodeJS
         
 ## License
-This project is licensed under the ${data.licenseName} - see the ${data.licenseUrl} file for details
 Please credit me if you use or change my code! Thank you :)
         
 ## Badges
-![shield](https://img.shields.io/github/followers/${data.gitUser}?label=Follow&style=social)
+![shield](https://img.shields.io/github/followers/dazrin?label=Follow&style=social)
         
 ## Contributing
         
@@ -260,8 +189,3 @@ For answers to common questions about this code of conduct, see the FAQ at
 https://www.contributor-covenant.org/faq. Translations are available at
 https://www.contributor-covenant.org/translations.
       
-`;
-    fs.writeFile('generated-README.md', markdown, (err) =>
-    err ? console.log(err) : console.log('Successfully created README.md'))
-});
-    
