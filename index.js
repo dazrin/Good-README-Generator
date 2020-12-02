@@ -85,18 +85,18 @@ inquirer
     ])
     .then((data) => {
         const markdown =
-`* # ${data.title}
+`# ${data.title}
       
 # Table of Contents
-\n* [About](#about)
-\n* [Installation](#installation)
-\n* [Instructions](#instructions)
-\n* [Screenshot](#screenshot)
-\n* [Author](#author)
-\n* [Credits](#credits)
-\n* [License](#license)
-\n* [Badges](#Badges)
-\n* [Contributing](#Contributing)
+* [About](#about)
+* [Installation](#installation)
+* [Instructions](#instructions)
+* [Screenshot](#screenshot)
+* [Author](#author)
+* [Credits](#credits)
+* [License](#license)
+* [Badges](#Badges)
+* [Contributing](#Contributing)
         
 ## About
 ${data.description}
@@ -262,6 +262,6 @@ https://www.contributor-covenant.org/translations.
       
 `;
     fs.writeFile('generated-README.md', markdown, (err) =>
-    err ? console.log(err) : console.log('Successfully created README.md'))
+    err ? console.log(err) : console.log('Successfully created file: generated-README.md'))
 });
     
